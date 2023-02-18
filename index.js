@@ -18,7 +18,7 @@ app.use(cors({credentials:true,origin:'https://roaring-lolly-990f40.netlify.app'
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
-// mongoose.set('strictQuery', true);
+mongoose.set('strictQuery', false);
 mongoose.connect('mongodb+srv://rajan:091792@cluster0.dojd6zi.mongodb.net/?retryWrites=true&w=majority');
 
 app.post('/register', async (req,res) => {
