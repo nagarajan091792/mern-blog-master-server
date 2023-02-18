@@ -133,6 +133,7 @@ app.get('/post/:id', async (req, res) => {
   const postDoc = await Post.findById(id).populate('author', ['username']);
   res.json(postDoc);
 })
-app.listen(process.env.PORT || 4000)
 
+const port = process.env.PORT || 8080;
+app.listen(port, console.log(`Listening on port ${port}...`));
 
