@@ -14,7 +14,7 @@ const fs = require('fs');
 const salt = bcrypt.genSaltSync(10);
 const secret = 'asdfe45we45w345wegw345werjktjwertkj';
 
-as.use(cors({
+app.use(cors({
     orgin: "*"
 }));
 app.use(express.json());
